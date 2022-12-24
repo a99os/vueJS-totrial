@@ -1,17 +1,19 @@
 <template>
-  <div>
-    <p>
-      Count: <strong>{{ count }}</strong>
-    </p>
+  <div class="comment" v-for="comment in comments" v-bind:key="comment.id">
+    <div><b>Name:</b>{{ comment.name }}</div>
+    <div><b>Phone:</b>{{ comment.phone }}</div>
+    <div><b>Content:</b>{{ comment.content }}</div>
   </div>
-  <button class="btn btn-success" @:click="increment">Increment</button>
-  <button class="btn btn-primary" v-on:click="decrement">Decrement</button>
 </template>
 <script>
 export default {
   data() {
     return {
-      count: 0,
+      comments: [
+        { id: 1, name: "Abbos", phone: 123455, content: "Lorem ipsum conten" },
+        { id: 2, name: "Sobir", phone: 32435, content: "Lorem ipsum conten" },
+        { id: 3, name: "Qodir", phone: 5425332, content: "Lorem ipsum conten" },
+      ],
     };
   },
   methods: {
@@ -24,4 +26,10 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.comment {
+  border: 5px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+</style>
