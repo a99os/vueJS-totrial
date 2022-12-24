@@ -1,7 +1,7 @@
 <template>
   <div>
     <comment-form @addComment="createComment" />
-    <comment-list v-bind:comments="comments" />
+    <comment-list v-bind:comments="comments" @remove="removeComment" />
   </div>
 </template>
 <script>
@@ -27,6 +27,9 @@ export default {
   methods: {
     createComment(comment) {
       this.comments.push(comment);
+    },
+    removeComment(comment) {
+      this.comments = this.comments.filter((c) => c.id != comment.id);
     },
   },
 };

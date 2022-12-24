@@ -5,6 +5,7 @@
       v-for="comment in comments"
       :comment="comment"
       v-bind:key="comment.id"
+      @remove="$emit('remove', comment)"
     />
   </div>
 </template>
@@ -22,6 +23,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>
