@@ -3,28 +3,28 @@
     <div class="w-75 mx-auto">
       <h3>Add comment</h3>
       <form @submit.prevent>
-        <input
+        <my-input
           v-model="comment.name"
           type="text"
           placeholder="Enter your name"
           class="form-control"
         />
-        <input
+        <my-input
           v-model="comment.phone"
           type="text"
           placeholder="Enter your phone"
           class="form-control my-3"
         />
-        <input
+        <my-input
           v-model="comment.content"
           type="text"
           placeholder="Enter your content"
           class="form-control"
         />
         <div class="d-flex flex-row-reverse">
-          <button @click="createComment" class="btn btn-primary mt-3">
+          <my-button @click="createComment" class="btn btn-primary mt-3">
             Add Comment
-          </button>
+          </my-button>
         </div>
       </form>
     </div>

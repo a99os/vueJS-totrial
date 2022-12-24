@@ -23,9 +23,5 @@ export default {
 };
 </script>
 <style scoped>
-.comment {
-  border: 5px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-}
+
 </style>
