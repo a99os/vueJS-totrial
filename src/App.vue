@@ -14,7 +14,11 @@ export default {
   },
   data() {
     return {
-      comments: [],
+      comments: [
+        { id: 1, name: "Abbos", phone: 123455, content: "Lorem ipsum conten" },
+        { id: 2, name: "Sobir", phone: 32435, content: "Lorem ipsum conten" },
+        { id: 3, name: "Qodir", phone: 5425332, content: "Lorem ipsum conten" },
+      ],
       name: "",
       phone: "",
       content: "",

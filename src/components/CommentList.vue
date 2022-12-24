@@ -1,19 +1,19 @@
 <template>
   <div>
-    <div
+    <comment-item
       class="w-75 mx-auto comment"
       v-for="comment in comments"
+      :comment="comment"
       v-bind:key="comment.id"
-    >
-      <div><b>Name:</b>{{ comment.name }}</div>
-      <div><b>Phone:</b>{{ comment.phone }}</div>
-      <div><b>Content:</b>{{ comment.content }}</div>
-    </div>
+    />
   </div>
 </template>
 
 <script>
+import CommentItem from "./CommentItem";
+
 export default {
+  components: { CommentItem },
   props: {
     comments: {
       type: Array,
